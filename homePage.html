@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+
+  <link rel="stylesheet" href="homePage.css"/>
+  <link rel="icon" href="twitter.ico"/>
+
+  <script src="https://kit.fontawesome.com/62bd4016d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Twitter</div>
+
+    <p id="homeName">hey</p>
+
+
+    <ul class="inner-navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="AccountPage.html">Account</a></li>
+      <li><a style="cursor: pointer;" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="flex-stuffs">
+
+    <aside class="side left-side">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </aside>
+
+
+    <main class="feeds">
+      <div class="own-tweet">
+        <!-- title -->
+        <textarea placeholder="title" id="tweet-title"></textarea>
+
+        <!-- img url -->
+        <textarea placeholder="img Link" id="tweet-img"></textarea>
+
+        <!-- content -->
+        <textarea placeholder="What's happening?" id="tweet-text"></textarea>
+        <button onclick="logTextareaValue()" id="main-click-btn">Tweet</button>
+      </div>
+      <div class="post" id="post-id">
+        <img src="" alt=""  id="page-img">
+        <h4 id="page-title"></h4>
+        <p class="post-content" id="post-content"></p>
+        <i class="fa-regular fa-heart" style="font-size: 1.5em; cursor: pointer;" id="heart" onclick="heart()"></i>
+      </div>
+
+    </main>
+
+    <aside class="side right-side">
+      <div class="trends">Trends for you</div>
+
+      <img class="summa-img" src="https://wp-asset.groww.in/wp-content/uploads/2021/10/12120522/All-You-Need-To-Know-About-Bad-Bank-in-India_Sep29.png" alt="" >
+      <p style=" margin-left: 106px;">Bank is offering Loans</p>
+
+      <img class="summa-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5d5v922-MDJka6BYwE0jgx7ZSGCH9cx7P2A&s" alt="">
+    
+      <p style="margin-top: 0px; margin-left: 170px;">Stock Raise</p>
+    </aside>
+
+  </div>
+  
+  <script>
+
+    function logout(){
+      window.location.href = "index.html"
+    }
+
+  function heart() {
+    const heartIcon = document.getElementById('heart');
+
+    if (heartIcon.classList.contains('fa-regular')) {
+      heartIcon.classList.remove('fa-regular');
+      heartIcon.classList.add('fa-solid');
+      heartIcon.style.color = '#0d8ddb';
+    } else {
+      heartIcon.classList.remove('fa-solid');
+      heartIcon.classList.add('fa-regular');
+      heartIcon.style.color = '';
+  }
+}
+
+
+function logTextareaValue(){
+  content = document.getElementById('tweet-text').value;
+  title = document.getElementById('tweet-title').value;
+  img = document.getElementById('tweet-img').value;
+  // console.log(content)
+
+  document.getElementById('post-content').innerHTML = content;
+  document.getElementById('page-title').innerHTML = title;
+  imgVal = document.getElementById('page-img').src = img;
+
+  if(!content || !title || !img){
+      alert("Fill All the Fields")
+  }else{
+    document.getElementById('post-id').style.display = "flex";
+  }
+  document.getElementById('tweet-text').value = ""; 
+  document.getElementById('tweet-title').value = "";
+  document.getElementById('tweet-img').value = "";
+}
+
+
+const storedName = localStorage.getItem("username");
+
+document.getElementById('homeName').innerHTML = `Welcome <b>${storedName}</b>...!`
+   
+  </script>
+</body>
+</html>

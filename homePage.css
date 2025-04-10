@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  padding-top: 60px;
+}
+
+.navbar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+.logo:hover{
+  font-size: 26px;
+  font-weight: 600;
+  color: #4b1df2;
+}
+
+.inner-navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.inner-navbar li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.inner-navbar li a:hover {
+  color: #1da1f2;
+}
+
+.flex-stuffs{
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.side {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.left-side ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left-side a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.right-side .trends {
+  font-weight: 600;
+  color: #333;
+}
+
+.feeds {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.own-tweet {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.own-tweet textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  height: 80px;
+  outline: none;
+}
+
+.own-tweet button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.own-tweet button:hover {
+  background-color: #0d8ddb;
+}
+
+.post {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 320px;
+  /* margin-bottom: 15px; */
+  color: #414141;
+  font-weight: bold;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.post img{
+  height: 200px;
+  
+}
+
+.post p{
+  text-align:justify;
+  color: 414141;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.post i{
+  margin-bottom: 20px;
+}
+
+
+#page-img{
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.summa-img {
+  height: 200px; width: 300px; margin-left: 40px; margin-top: 20px; border-radius: 20px;
+}
+
+.summa-img:hover {
+  height: 205px;
+  width: 305px;
+}
+

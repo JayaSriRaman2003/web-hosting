@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="AccountPage.css">
+    <script src="https://kit.fontawesome.com/62bd4016d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="back-icon" id="nameClick">
+      <i class="fa-solid fa-arrow-left"></i>
+    </div>
+  
+    <div class="card-1">
+        <div class="circle">
+          <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt=""/>
+        </div>
+
+        <p class="hey" id="name"><b></b></p>
+        <p class="hey-1" id="pass"><b></b></p>
+
+        <button class="del-btn" id="del-btn" onclick="deleteUser()">Delete Account</button>
+      </div>
+<script>
+  document.getElementById("nameClick").addEventListener("click", function() {
+    window.location.href = "homePage.html";
+  });
+
+  const storedName = localStorage.getItem("username");
+    const storedPass = localStorage.getItem("password");
+
+  document.getElementById("name").innerHTML = storedName;
+  document.getElementById("pass").innerHTML = storedPass;
+
+
+  function deleteUser(){
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    alert("User Deleted Successfully")
+    window.location.href = "index.html";
+  }
+</script>
+      
+</body>
+</html>

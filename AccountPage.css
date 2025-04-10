@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.backbutton{
+  background-color: #fafafa;
+  z-index: 1000;
+}
+
+
+
+.card-1{
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-1 {
+  background-color: #6a4cf0;
+}
+
+
+.circle {
+  height: 150px;
+  margin-top: 50px;
+  width: 150px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
+  height: 100px;
+}
+
+p[class = "hey"]{
+margin-top: 30px;    
+}
+
+.hey-1{
+    font-size: 19px;
+    color: rgb(223, 223, 223);
+}
+
+.back-icon{
+  height: 50px;
+  width: 50px;
+  background-color: #6a4cf0;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.back-icon{
+  color: white;
+}
+
+
+.del-btn{
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
